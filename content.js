@@ -11,57 +11,36 @@
     // ============================================================
 
     async function loadConfig() {
-
         try {
+            const response = await chrome.runtime.sendMessage({
+                type: "GET_CONFIG",
+            });
 
-            const response =
-                await chrome.runtime.sendMessage({
-
-                    type:
-                        "GET_CONFIG"
-
-                });
-
-
-            if (
-                !response ||
-                !response.success
-            ) {
-
-                console.error(
-                    "[Company Web Control] Cannot load config"
-                );
+            if (!response || !response.success) {
+                console.error("[Company Web Control] Cannot load config");
 
                 return false;
             }
 
+            CONFIG = response.config;
 
-            CONFIG =
-                response.config;
+            console.log("[Company Web Control] Config loaded", {
+                source: response.source,
 
+                policyId: CONFIG.id,
 
-            console.log(
-                "[Company Web Control] Config loaded",
-                CONFIG
-            );
+                policyName: CONFIG.name,
 
+                config: CONFIG,
+            });
 
             return true;
-
-
         } catch (error) {
-
-            console.error(
-                "[Company Web Control] Load config error",
-                error
-            );
-
+            console.error("[Company Web Control] Load config error", error);
 
             return false;
         }
-
     }
-
     // ============================================================
     // MAIN CHECK
     // ============================================================
