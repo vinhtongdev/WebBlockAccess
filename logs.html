@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        Access Logs
+    </title>
+
+    <link rel="stylesheet" href="logs.css">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+
+            <h1>
+                Access Logs
+            </h1>
+
+
+            <div class="actions">
+
+                <button id="refreshBtn">
+                    Refresh
+                </button>
+
+
+                <button id="clearBtn" class="danger">
+                    Clear Logs
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="filters">
+
+            <select id="decisionFilter">
+
+                <option value="">
+                    All
+                </option>
+
+                <option value="ALLOW">
+                    ALLOW
+                </option>
+
+                <option value="BLOCK">
+                    BLOCK
+                </option>
+
+            </select>
+
+
+            <input id="searchInput" type="text" placeholder="Search domain or URL...">
+
+        </div>
+
+
+        <div id="summary" class="summary"></div>
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Time
+                    </th>
+
+                    <th>
+                        Decision
+                    </th>
+
+                    <th>
+                        Host
+                    </th>
+
+                    <th>
+                        Reason
+                    </th>
+
+                    <th>
+                        URL
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="logTableBody">
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <script src="logs.js"></script>
+
+</body>
+
+</html>

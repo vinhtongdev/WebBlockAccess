@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        Company Web Control
+    </title>
+
+    <link rel="stylesheet" href="popup.css">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <h2>
+            Company Web Control
+        </h2>
+
+
+        <!-- ENABLE -->
+
+        <div class="section">
+
+            <label class="switch-row">
+
+                <span>
+                    Enable Extension
+                </span>
+
+                <input id="enabled" type="checkbox">
+
+            </label>
+
+        </div>
+
+
+        <!-- WORKING HOURS -->
+
+        <div class="section">
+
+            <h3>
+                Working Hours
+            </h3>
+
+
+            <div class="row">
+
+                <label>
+                    Start
+                </label>
+
+                <input id="startTime" type="time">
+
+            </div>
+
+
+            <div class="row">
+
+                <label>
+                    End
+                </label>
+
+                <input id="endTime" type="time">
+
+            </div>
+
+        </div>
+
+
+        <!-- WORKING DAYS -->
+
+        <div class="section">
+
+            <h3>
+                Working Days
+            </h3>
+
+            <div id="workingDays">
+
+                <label>
+                    <input type="checkbox" value="1">
+                    Mon
+                </label>
+
+                <label>
+                    <input type="checkbox" value="2">
+                    Tue
+                </label>
+
+                <label>
+                    <input type="checkbox" value="3">
+                    Wed
+                </label>
+
+                <label>
+                    <input type="checkbox" value="4">
+                    Thu
+                </label>
+
+                <label>
+                    <input type="checkbox" value="5">
+                    Fri
+                </label>
+
+                <label>
+                    <input type="checkbox" value="6">
+                    Sat
+                </label>
+
+                <label>
+                    <input type="checkbox" value="0">
+                    Sun
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- WHITELIST -->
+
+        <div class="section">
+
+            <h3>
+                Whitelist
+            </h3>
+
+            <textarea id="whitelist" placeholder="google.com|*&#10;youtube.com|/watch*"></textarea>
+
+            <div class="hint">
+                Format: domain|path
+            </div>
+
+        </div>
+
+
+        <!-- BLACKLIST -->
+
+        <div class="section">
+
+            <h3>
+                Blacklist
+            </h3>
+
+            <textarea id="blacklist" placeholder="facebook.com|*&#10;youtube.com|/shorts/*"></textarea>
+
+            <div class="hint">
+                Format: domain|path
+            </div>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="buttons">
+
+            <button id="saveBtn">
+                Save
+            </button>
+
+            <button id="resetBtn" class="secondary">
+                Reset
+            </button>
+
+        </div>
+
+        <div class="section">
+        
+            <button id="viewLogsBtn" class="logs-button">
+                View Access Logs
+            </button>
+        
+        </div>
+        <div id="status"></div>
+
+    </div>
+
+
+    <script src="popup.js"></script>
+
+</body>
+
+</html>

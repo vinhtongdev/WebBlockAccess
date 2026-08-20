@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Company Web Control",
+    "version": "1.1.0",
+    "description": "Control website access during working hours",
+    "permissions": [
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Company Web Control"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "blocker.css"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}

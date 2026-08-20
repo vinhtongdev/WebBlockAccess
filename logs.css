@@ -1,0 +1,185 @@
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    background:
+        #f4f6f8;
+
+    color:
+        #222;
+
+}
+
+
+.container {
+
+    padding: 20px;
+
+}
+
+
+.header {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.actions {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+button {
+
+    border: none;
+
+    padding:
+        8px 14px;
+
+    border-radius:
+        5px;
+
+    cursor:
+        pointer;
+
+    background:
+        #1976d2;
+
+    color:
+        white;
+
+}
+
+
+button.danger {
+
+    background:
+        #d32f2f;
+
+}
+
+
+.filters {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.filters input {
+
+    width: 300px;
+
+    padding: 8px;
+
+}
+
+
+.filters select {
+
+    padding: 8px;
+
+}
+
+
+.summary {
+
+    margin-bottom:
+        15px;
+
+    font-weight:
+        bold;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse:
+        collapse;
+
+    background:
+        white;
+
+}
+
+
+th,
+td {
+
+    padding: 10px;
+
+    border-bottom:
+        1px solid #ddd;
+
+    text-align:
+        left;
+
+    vertical-align:
+        top;
+
+}
+
+
+th {
+
+    background:
+        #eeeeee;
+
+}
+
+
+.decision-allow {
+
+    font-weight:
+        bold;
+
+    color:
+        #2e7d32;
+
+}
+
+
+.decision-block {
+
+    font-weight:
+        bold;
+
+    color:
+        #d32f2f;
+
+}
+
+
+.url-cell {
+
+    max-width:
+        500px;
+
+    word-break:
+        break-all;
+
+}
